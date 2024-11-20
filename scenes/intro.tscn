@@ -1,0 +1,112 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://resources/themeNormal.tres" type="Theme" id=1]
+[ext_resource path="res://assets/carinha/carinha1.png" type="Texture" id=2]
+[ext_resource path="res://assets/carinha/carinha6.png" type="Texture" id=3]
+[ext_resource path="res://assets/carinha/carinha3.png" type="Texture" id=4]
+[ext_resource path="res://assets/carinha/carinha4.png" type="Texture" id=5]
+[ext_resource path="res://assets/carinha/carinha2.png" type="Texture" id=6]
+[ext_resource path="res://assets/carinha/carinha5.png" type="Texture" id=7]
+[ext_resource path="res://assets/bG_IJJ.png" type="Texture" id=8]
+
+[sub_resource type="AnimatedTexture" id=1]
+frames = 6
+oneshot = true
+fps = 8.0
+frame_0/texture = ExtResource( 2 )
+frame_1/texture = ExtResource( 6 )
+frame_1/delay_sec = 0.0
+frame_2/texture = ExtResource( 4 )
+frame_2/delay_sec = 0.0
+frame_3/texture = ExtResource( 5 )
+frame_3/delay_sec = 0.0
+frame_4/texture = ExtResource( 7 )
+frame_4/delay_sec = 0.0
+frame_5/texture = ExtResource( 3 )
+frame_5/delay_sec = 0.0
+
+[sub_resource type="Animation" id=2]
+resource_name = "default"
+length = 10.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("TextureRect:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.2, 4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 230, 100 ), Vector2( 230, 700 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("TextureRect2:rect_position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.1, 6 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 135.384, -900 ), Vector2( 135.384, 400 ) ]
+}
+
+[node name="Control" type="Control"]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 640.0
+margin_bottom = 360.0
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_left = 230.0
+margin_top = 131.579
+margin_right = 500.0
+margin_bottom = 371.58
+rect_scale = Vector2( 0.6, 0.6 )
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="TextureRect"]
+anchor_left = -0.0890625
+anchor_top = -0.194444
+anchor_right = -0.0890625
+anchor_bottom = -0.194444
+margin_left = 49.0469
+margin_top = 295.0
+margin_right = 84.0469
+margin_bottom = 308.0
+rect_scale = Vector2( 7, 7 )
+size_flags_horizontal = 4
+size_flags_vertical = 12
+theme = ExtResource( 1 )
+text = "ruanjooj"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+margin_left = 135.384
+margin_top = -833.898
+margin_right = 2055.38
+margin_bottom = 246.102
+rect_scale = Vector2( 0.2, 0.2 )
+size_flags_horizontal = 4
+texture = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "default"
+anims/default = SubResource( 2 )

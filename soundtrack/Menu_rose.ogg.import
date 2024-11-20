@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Menu_rose.ogg-403f8604d523efe3b8022e4d96c063f5.oggstr"
+
+[deps]
+
+source_file="res://soundtrack/Menu_rose.ogg"
+dest_files=[ "res://.import/Menu_rose.ogg-403f8604d523efe3b8022e4d96c063f5.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

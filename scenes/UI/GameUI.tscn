@@ -1,0 +1,1600 @@
+[gd_scene load_steps=47 format=2]
+
+[ext_resource path="res://resources/BitPotion.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://resources/themeRed.tres" type="Theme" id=2]
+[ext_resource path="res://resources/themeYellow.tres" type="Theme" id=3]
+[ext_resource path="res://assets/powerups/submetralhadora.png" type="Texture" id=4]
+[ext_resource path="res://resources/themeNormal.tres" type="Theme" id=5]
+[ext_resource path="res://assets/powerups/andre.png" type="Texture" id=6]
+[ext_resource path="res://assets/powerups/laser.png" type="Texture" id=7]
+[ext_resource path="res://assets/powerups/shot_rapida.png" type="Texture" id=8]
+[ext_resource path="res://assets/powerups/magnum.png" type="Texture" id=9]
+[ext_resource path="res://assets/powerups/bazuca.png" type="Texture" id=10]
+[ext_resource path="res://assets/powerups/arco.png" type="Texture" id=11]
+[ext_resource path="res://assets/powerups/watergun.png" type="Texture" id=12]
+[ext_resource path="res://assets/powerups/fireball.png" type="Texture" id=13]
+[ext_resource path="res://assets/powerups/paintball.png" type="Texture" id=14]
+[ext_resource path="res://assets/powerups/mago.png" type="Texture" id=15]
+[ext_resource path="res://assets/powerups/bionica.png" type="Texture" id=16]
+[ext_resource path="res://assets/powerups/granada.png" type="Texture" id=17]
+[ext_resource path="res://assets/powerups/desert_eagle.png" type="Texture" id=18]
+[ext_resource path="res://assets/powerups/musket.png" type="Texture" id=19]
+[ext_resource path="res://assets/powerups/ppsh.png" type="Texture" id=20]
+[ext_resource path="res://assets/powerups/bomba.png" type="Texture" id=21]
+[ext_resource path="res://assets/powerups/minigun.png" type="Texture" id=22]
+[ext_resource path="res://assets/powerups/axe.png" type="Texture" id=23]
+
+[sub_resource type="DynamicFont" id=14]
+outline_size = 1
+outline_color = Color( 0.172549, 0.105882, 0.180392, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="Theme" id=15]
+default_font = SubResource( 14 )
+
+[sub_resource type="Animation" id=9]
+resource_name = "default"
+length = 1.8
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3, 0.6, 0.9, 1.2, 1.5, 1.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1.5, 1.5 ), Vector2( 1, 1 ), Vector2( 1.5, 1.5 ), Vector2( 1, 1 ), Vector2( 1.5, 1.5 ), Vector2( 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:rect_rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1.8 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ -10.0, -10.0 ]
+}
+
+[sub_resource type="Animation" id=10]
+resource_name = "default"
+length = 1.8
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3, 0.6, 0.9, 1.2, 1.5, 1.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1.5, 1.5 ), Vector2( 1, 1 ), Vector2( 1.5, 1.5 ), Vector2( 1, 1 ), Vector2( 1.5, 1.5 ), Vector2( 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:rect_rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1.8 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ -10.0, -10.0 ]
+}
+
+[sub_resource type="Animation" id=11]
+resource_name = "default"
+length = 1.8
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3, 0.6, 0.9, 1.2, 1.5, 1.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1.5, 1.5 ), Vector2( 1, 1 ), Vector2( 1.5, 1.5 ), Vector2( 1, 1 ), Vector2( 1.5, 1.5 ), Vector2( 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:rect_rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1.8 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ -10.0, -10.0 ]
+}
+
+[sub_resource type="Animation" id=12]
+resource_name = "default"
+length = 1.8
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3, 0.6, 0.9, 1.2, 1.5, 1.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1.5, 1.5 ), Vector2( 1, 1 ), Vector2( 1.5, 1.5 ), Vector2( 1, 1 ), Vector2( 1.5, 1.5 ), Vector2( 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:rect_rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1.8 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ -10.0, -10.0 ]
+}
+
+[sub_resource type="Animation" id=13]
+resource_name = "default"
+length = 1.8
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3, 0.6, 0.9, 1.2, 1.5, 1.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1.5, 1.5 ), Vector2( 1, 1 ), Vector2( 1.5, 1.5 ), Vector2( 1, 1 ), Vector2( 1.5, 1.5 ), Vector2( 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:rect_rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1.8 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ -10.0, -10.0 ]
+}
+
+[sub_resource type="Animation" id=16]
+resource_name = "default"
+length = 1.8
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3, 0.6, 0.9, 1.2, 1.5, 1.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1.5, 1.5 ), Vector2( 1, 1 ), Vector2( 1.5, 1.5 ), Vector2( 1, 1 ), Vector2( 1.5, 1.5 ), Vector2( 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:rect_rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1.8 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ -10.0, -10.0 ]
+}
+
+[sub_resource type="Animation" id=17]
+resource_name = "default"
+length = 1.8
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3, 0.6, 0.9, 1.2, 1.5, 1.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1.5, 1.5 ), Vector2( 1, 1 ), Vector2( 1.5, 1.5 ), Vector2( 1, 1 ), Vector2( 1.5, 1.5 ), Vector2( 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:rect_rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1.8 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ -10.0, -10.0 ]
+}
+
+[sub_resource type="Animation" id=18]
+resource_name = "default"
+length = 1.8
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3, 0.6, 0.9, 1.2, 1.5, 1.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1.5, 1.5 ), Vector2( 1, 1 ), Vector2( 1.5, 1.5 ), Vector2( 1, 1 ), Vector2( 1.5, 1.5 ), Vector2( 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:rect_rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1.8 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ -10.0, -10.0 ]
+}
+
+[sub_resource type="Animation" id=19]
+resource_name = "default"
+length = 1.8
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3, 0.6, 0.9, 1.2, 1.5, 1.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1.5, 1.5 ), Vector2( 1, 1 ), Vector2( 1.5, 1.5 ), Vector2( 1, 1 ), Vector2( 1.5, 1.5 ), Vector2( 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:rect_rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1.8 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ -10.0, -10.0 ]
+}
+
+[sub_resource type="Animation" id=20]
+resource_name = "default"
+length = 1.8
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3, 0.6, 0.9, 1.2, 1.5, 1.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1.5, 1.5 ), Vector2( 1, 1 ), Vector2( 1.5, 1.5 ), Vector2( 1, 1 ), Vector2( 1.5, 1.5 ), Vector2( 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:rect_rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1.8 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ -10.0, -10.0 ]
+}
+
+[sub_resource type="Animation" id=21]
+resource_name = "default"
+length = 1.8
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3, 0.6, 0.9, 1.2, 1.5, 1.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1.5, 1.5 ), Vector2( 1, 1 ), Vector2( 1.5, 1.5 ), Vector2( 1, 1 ), Vector2( 1.5, 1.5 ), Vector2( 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:rect_rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1.8 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ -10.0, -10.0 ]
+}
+
+[sub_resource type="Animation" id=22]
+resource_name = "default"
+length = 1.8
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3, 0.6, 0.9, 1.2, 1.5, 1.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1.5, 1.5 ), Vector2( 1, 1 ), Vector2( 1.5, 1.5 ), Vector2( 1, 1 ), Vector2( 1.5, 1.5 ), Vector2( 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:rect_rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1.8 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ -10.0, -10.0 ]
+}
+
+[sub_resource type="Animation" id=23]
+resource_name = "default"
+length = 1.8
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3, 0.6, 0.9, 1.2, 1.5, 1.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1.5, 1.5 ), Vector2( 1, 1 ), Vector2( 1.5, 1.5 ), Vector2( 1, 1 ), Vector2( 1.5, 1.5 ), Vector2( 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:rect_rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1.8 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ -10.0, -10.0 ]
+}
+
+[sub_resource type="Animation" id=24]
+resource_name = "default"
+length = 1.8
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3, 0.6, 0.9, 1.2, 1.5, 1.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1.5, 1.5 ), Vector2( 1, 1 ), Vector2( 1.5, 1.5 ), Vector2( 1, 1 ), Vector2( 1.5, 1.5 ), Vector2( 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:rect_rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1.8 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ -10.0, -10.0 ]
+}
+
+[sub_resource type="Animation" id=25]
+resource_name = "default"
+length = 1.8
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3, 0.6, 0.9, 1.2, 1.5, 1.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1.5, 1.5 ), Vector2( 1, 1 ), Vector2( 1.5, 1.5 ), Vector2( 1, 1 ), Vector2( 1.5, 1.5 ), Vector2( 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:rect_rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1.8 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ -10.0, -10.0 ]
+}
+
+[sub_resource type="Animation" id=26]
+resource_name = "default"
+length = 1.8
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3, 0.6, 0.9, 1.2, 1.5, 1.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1.5, 1.5 ), Vector2( 1, 1 ), Vector2( 1.5, 1.5 ), Vector2( 1, 1 ), Vector2( 1.5, 1.5 ), Vector2( 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:rect_rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1.8 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ -10.0, -10.0 ]
+}
+
+[sub_resource type="Animation" id=27]
+resource_name = "default"
+length = 1.8
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3, 0.6, 0.9, 1.2, 1.5, 1.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1.5, 1.5 ), Vector2( 1, 1 ), Vector2( 1.5, 1.5 ), Vector2( 1, 1 ), Vector2( 1.5, 1.5 ), Vector2( 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:rect_rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1.8 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ -10.0, -10.0 ]
+}
+
+[sub_resource type="Animation" id=28]
+resource_name = "default"
+length = 1.8
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3, 0.6, 0.9, 1.2, 1.5, 1.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1.5, 1.5 ), Vector2( 1, 1 ), Vector2( 1.5, 1.5 ), Vector2( 1, 1 ), Vector2( 1.5, 1.5 ), Vector2( 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:rect_rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1.8 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ -10.0, -10.0 ]
+}
+
+[sub_resource type="Animation" id=29]
+resource_name = "default"
+length = 1.8
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3, 0.6, 0.9, 1.2, 1.5, 1.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1.5, 1.5 ), Vector2( 1, 1 ), Vector2( 1.5, 1.5 ), Vector2( 1, 1 ), Vector2( 1.5, 1.5 ), Vector2( 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:rect_rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1.8 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ -10.0, -10.0 ]
+}
+
+[sub_resource type="StyleBoxFlat" id=6]
+bg_color = Color( 0.0941176, 1, 0, 1 )
+border_width_left = 1
+border_width_top = 2
+border_width_right = 1
+border_width_bottom = 2
+border_color = Color( 0, 0, 0, 0 )
+
+[sub_resource type="StyleBoxFlat" id=7]
+bg_color = Color( 1, 1, 1, 0 )
+border_width_left = 1
+border_width_top = 2
+border_width_right = 1
+border_width_bottom = 2
+
+[node name="GameUI" type="CanvasLayer"]
+pause_mode = 2
+layer = 11
+
+[node name="PlayerStatus" type="MarginContainer" parent="."]
+margin_right = 640.0
+margin_bottom = 360.0
+rect_scale = Vector2( 2, 2 )
+custom_constants/margin_right = 8
+custom_constants/margin_top = 20
+custom_constants/margin_left = 10
+custom_constants/margin_bottom = 16
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PlayerStatus"]
+margin_left = 10.0
+margin_top = 20.0
+margin_right = 632.0
+margin_bottom = 344.0
+
+[node name="Label" type="Label" parent="PlayerStatus/VBoxContainer"]
+margin_right = 28.0
+margin_bottom = 13.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme = SubResource( 15 )
+custom_colors/font_color = Color( 0.196078, 0.254902, 0.709804, 1 )
+text = "Player"
+
+[node name="Label2" type="Label" parent="PlayerStatus/VBoxContainer"]
+margin_top = 17.0
+margin_right = 38.0
+margin_bottom = 30.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme = SubResource( 15 )
+custom_colors/font_color = Color( 1, 0.956863, 0.878431, 1 )
+text = "Level 0 "
+
+[node name="EnemyStatus" type="MarginContainer" parent="."]
+margin_right = 320.0
+margin_bottom = 180.0
+rect_scale = Vector2( 2, 2 )
+size_flags_horizontal = 8
+size_flags_vertical = 0
+custom_constants/margin_right = 8
+custom_constants/margin_top = 20
+custom_constants/margin_left = 16
+custom_constants/margin_bottom = 16
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="EnemyStatus"]
+margin_left = 16.0
+margin_top = 20.0
+margin_right = 312.0
+margin_bottom = 164.0
+
+[node name="Label" type="Label" parent="EnemyStatus/VBoxContainer"]
+margin_left = 267.0
+margin_right = 296.0
+margin_bottom = 13.0
+size_flags_horizontal = 8
+theme = ExtResource( 2 )
+custom_colors/font_color = Color( 0.737255, 0.12549, 0.12549, 1 )
+text = "Inimigo"
+
+[node name="Label2" type="Label" parent="EnemyStatus/VBoxContainer"]
+margin_left = 263.0
+margin_top = 17.0
+margin_right = 296.0
+margin_bottom = 30.0
+size_flags_horizontal = 8
+theme = ExtResource( 2 )
+custom_colors/font_color = Color( 1, 0.956863, 0.878431, 1 )
+text = "Level 0"
+
+[node name="Score" type="MarginContainer" parent="."]
+margin_right = 320.0
+margin_bottom = 180.0
+rect_scale = Vector2( 2, 2 )
+theme = ExtResource( 2 )
+custom_constants/margin_right = 16
+custom_constants/margin_top = 16
+custom_constants/margin_left = 16
+custom_constants/margin_bottom = 16
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Score"]
+margin_left = 142.0
+margin_top = 16.0
+margin_right = 178.0
+margin_bottom = 29.0
+size_flags_horizontal = 4
+size_flags_vertical = 0
+custom_colors/font_color = Color( 1, 0.956863, 0.878431, 1 )
+text = "Score: 0"
+
+[node name="PlayerPowerUps" type="MarginContainer" parent="."]
+margin_right = 640.0
+margin_bottom = 360.0
+custom_constants/margin_right = 16
+custom_constants/margin_top = 48
+custom_constants/margin_left = 110
+custom_constants/margin_bottom = 16
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SubMetralha" type="TextureRect" parent="PlayerPowerUps"]
+visible = false
+margin_left = 110.0
+margin_top = 48.0
+margin_right = 150.0
+margin_bottom = 88.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture = ExtResource( 4 )
+
+[node name="Label" type="Label" parent="PlayerPowerUps/SubMetralha"]
+margin_left = -3.0
+margin_top = 40.0
+margin_right = 51.0
+margin_bottom = 53.0
+theme = ExtResource( 5 )
+text = "SubMetralha"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="PlayerPowerUps/SubMetralha"]
+margin_left = 26.1637
+margin_top = 37.4869
+margin_right = 390.164
+margin_bottom = 86.4869
+rect_rotation = -10.0
+rect_pivot_offset = Vector2( 184.006, 26.8318 )
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme = ExtResource( 3 )
+text = "Novo PowerUp!
+\"E\" para equipar"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="PlayerPowerUps/SubMetralha/Label2"]
+autoplay = "default"
+anims/default = SubResource( 9 )
+
+[node name="Andre" type="TextureRect" parent="PlayerPowerUps"]
+visible = false
+margin_left = 110.0
+margin_top = 48.0
+margin_right = 150.0
+margin_bottom = 88.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture = ExtResource( 6 )
+
+[node name="Label" type="Label" parent="PlayerPowerUps/Andre"]
+margin_left = -17.0
+margin_top = 40.0
+margin_right = 61.0
+margin_bottom = 64.0
+theme = ExtResource( 5 )
+text = "Amdre 
+(Cavaleiro)"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="PlayerPowerUps/Andre"]
+margin_left = 26.1637
+margin_top = 37.4869
+margin_right = 390.164
+margin_bottom = 86.4869
+rect_rotation = -10.0
+rect_scale = Vector2( 1.5, 1.5 )
+rect_pivot_offset = Vector2( 184.006, 26.8318 )
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme = ExtResource( 3 )
+text = "Novo PowerUp!
+\"E\" para equipar"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="PlayerPowerUps/Andre/Label2"]
+autoplay = "default"
+anims/default = SubResource( 10 )
+
+[node name="Magnum" type="TextureRect" parent="PlayerPowerUps"]
+visible = false
+margin_left = 110.0
+margin_top = 48.0
+margin_right = 150.0
+margin_bottom = 88.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture = ExtResource( 9 )
+
+[node name="Label" type="Label" parent="PlayerPowerUps/Magnum"]
+margin_left = -12.0
+margin_top = 40.0
+margin_right = 58.0
+margin_bottom = 48.0
+size_flags_vertical = 0
+theme = ExtResource( 5 )
+text = "Magnum"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="PlayerPowerUps/Magnum"]
+margin_left = 26.1637
+margin_top = 37.4869
+margin_right = 390.164
+margin_bottom = 86.4869
+rect_rotation = -10.0
+rect_pivot_offset = Vector2( 184.006, 26.8318 )
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme = ExtResource( 3 )
+text = "Novo PowerUp!
+\"E\" para equipar"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="PlayerPowerUps/Magnum/Label2"]
+autoplay = "default"
+anims/default = SubResource( 11 )
+
+[node name="ShotR" type="TextureRect" parent="PlayerPowerUps"]
+visible = false
+margin_left = 110.0
+margin_top = 48.0
+margin_right = 150.0
+margin_bottom = 88.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture = ExtResource( 8 )
+
+[node name="Label" type="Label" parent="PlayerPowerUps/ShotR"]
+margin_left = -12.0
+margin_top = 40.0
+margin_right = 58.0
+margin_bottom = 69.0
+size_flags_vertical = 0
+theme = ExtResource( 5 )
+text = "Shotgun
+Rapida"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="PlayerPowerUps/ShotR"]
+margin_left = 26.1637
+margin_top = 37.4869
+margin_right = 390.164
+margin_bottom = 86.4869
+rect_rotation = -10.0
+rect_pivot_offset = Vector2( 184.006, 26.8318 )
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme = ExtResource( 3 )
+text = "Novo PowerUp!
+\"E\" para equipar"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="PlayerPowerUps/ShotR/Label2"]
+autoplay = "default"
+anims/default = SubResource( 12 )
+
+[node name="Bazuca" type="TextureRect" parent="PlayerPowerUps"]
+visible = false
+margin_left = 110.0
+margin_top = 48.0
+margin_right = 150.0
+margin_bottom = 88.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture = ExtResource( 10 )
+
+[node name="Label" type="Label" parent="PlayerPowerUps/Bazuca"]
+margin_left = -12.0
+margin_top = 40.0
+margin_right = 58.0
+margin_bottom = 48.0
+size_flags_vertical = 0
+theme = ExtResource( 5 )
+text = "Bazuca"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="PlayerPowerUps/Bazuca"]
+margin_left = 26.1637
+margin_top = 37.4869
+margin_right = 390.164
+margin_bottom = 86.4869
+rect_rotation = -10.0
+rect_pivot_offset = Vector2( 184.006, 26.8318 )
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme = ExtResource( 3 )
+text = "Novo PowerUp!
+\"E\" para equipar"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="PlayerPowerUps/Bazuca/Label2"]
+autoplay = "default"
+anims/default = SubResource( 13 )
+
+[node name="Laser" type="TextureRect" parent="PlayerPowerUps"]
+visible = false
+margin_left = 110.0
+margin_top = 48.0
+margin_right = 150.0
+margin_bottom = 88.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture = ExtResource( 7 )
+
+[node name="Label" type="Label" parent="PlayerPowerUps/Laser"]
+margin_left = -12.0
+margin_top = 40.0
+margin_right = 58.0
+margin_bottom = 53.0
+size_flags_vertical = 0
+theme = ExtResource( 5 )
+text = "Arma Lazer"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="PlayerPowerUps/Laser"]
+margin_left = 26.1637
+margin_top = 37.4869
+margin_right = 390.164
+margin_bottom = 86.4869
+rect_rotation = -10.0
+rect_pivot_offset = Vector2( 184.006, 26.8318 )
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme = ExtResource( 3 )
+text = "Novo PowerUp!
+\"E\" para equipar"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="PlayerPowerUps/Laser/Label2"]
+autoplay = "default"
+anims/default = SubResource( 16 )
+
+[node name="Arco" type="TextureRect" parent="PlayerPowerUps"]
+visible = false
+margin_left = 110.0
+margin_top = 48.0
+margin_right = 150.0
+margin_bottom = 88.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture = ExtResource( 11 )
+
+[node name="Label" type="Label" parent="PlayerPowerUps/Arco"]
+margin_left = -12.0
+margin_top = 40.0
+margin_right = 58.0
+margin_bottom = 48.0
+size_flags_vertical = 0
+theme = ExtResource( 5 )
+text = "Arco"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="PlayerPowerUps/Arco"]
+margin_left = 26.1637
+margin_top = 37.4869
+margin_right = 390.164
+margin_bottom = 86.4869
+rect_rotation = -10.0
+rect_pivot_offset = Vector2( 184.006, 26.8318 )
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme = ExtResource( 3 )
+text = "Novo PowerUp!
+\"E\" para equipar"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="PlayerPowerUps/Arco/Label2"]
+autoplay = "default"
+anims/default = SubResource( 17 )
+
+[node name="Watergun" type="TextureRect" parent="PlayerPowerUps"]
+visible = false
+margin_left = 110.0
+margin_top = 48.0
+margin_right = 150.0
+margin_bottom = 88.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture = ExtResource( 12 )
+
+[node name="Label" type="Label" parent="PlayerPowerUps/Watergun"]
+margin_left = -12.0
+margin_top = 40.0
+margin_right = 58.0
+margin_bottom = 48.0
+size_flags_vertical = 0
+theme = ExtResource( 5 )
+text = "Arminha D'agua"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="PlayerPowerUps/Watergun"]
+margin_left = 26.1637
+margin_top = 37.4869
+margin_right = 390.164
+margin_bottom = 86.4869
+rect_rotation = -10.0
+rect_pivot_offset = Vector2( 184.006, 26.8318 )
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme = ExtResource( 3 )
+text = "Novo PowerUp!
+\"E\" para equipar"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="PlayerPowerUps/Watergun/Label2"]
+autoplay = "default"
+anims/default = SubResource( 18 )
+
+[node name="Fireball" type="TextureRect" parent="PlayerPowerUps"]
+visible = false
+margin_left = 110.0
+margin_top = 48.0
+margin_right = 150.0
+margin_bottom = 88.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture = ExtResource( 13 )
+
+[node name="Label" type="Label" parent="PlayerPowerUps/Fireball"]
+margin_left = -12.0
+margin_top = 40.0
+margin_right = 58.0
+margin_bottom = 48.0
+size_flags_vertical = 0
+theme = ExtResource( 5 )
+text = "Bola de fogo"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="PlayerPowerUps/Fireball"]
+margin_left = 26.1637
+margin_top = 37.4869
+margin_right = 390.164
+margin_bottom = 86.4869
+rect_rotation = -10.0
+rect_pivot_offset = Vector2( 184.006, 26.8318 )
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme = ExtResource( 3 )
+text = "Novo PowerUp!
+\"E\" para equipar"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="PlayerPowerUps/Fireball/Label2"]
+autoplay = "default"
+anims/default = SubResource( 19 )
+
+[node name="Paintball" type="TextureRect" parent="PlayerPowerUps"]
+visible = false
+margin_left = 110.0
+margin_top = 48.0
+margin_right = 150.0
+margin_bottom = 88.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture = ExtResource( 14 )
+
+[node name="Label" type="Label" parent="PlayerPowerUps/Paintball"]
+margin_left = -12.0
+margin_top = 40.0
+margin_right = 58.0
+margin_bottom = 48.0
+size_flags_vertical = 0
+theme = ExtResource( 5 )
+text = "Arma de Paintball"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="PlayerPowerUps/Paintball"]
+margin_left = 26.1637
+margin_top = 37.4869
+margin_right = 390.164
+margin_bottom = 86.4869
+rect_rotation = -10.0
+rect_pivot_offset = Vector2( 184.006, 26.8318 )
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme = ExtResource( 3 )
+text = "Novo PowerUp!
+\"E\" para equipar"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="PlayerPowerUps/Paintball/Label2"]
+autoplay = "default"
+anims/default = SubResource( 20 )
+
+[node name="Mago" type="TextureRect" parent="PlayerPowerUps"]
+visible = false
+margin_left = 110.0
+margin_top = 48.0
+margin_right = 150.0
+margin_bottom = 88.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture = ExtResource( 15 )
+
+[node name="Label" type="Label" parent="PlayerPowerUps/Mago"]
+margin_left = -12.0
+margin_top = 40.0
+margin_right = 58.0
+margin_bottom = 48.0
+size_flags_vertical = 0
+theme = ExtResource( 5 )
+text = "Cajado Magico"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="PlayerPowerUps/Mago"]
+margin_left = 26.1637
+margin_top = 37.4869
+margin_right = 390.164
+margin_bottom = 86.4869
+rect_rotation = -10.0
+rect_pivot_offset = Vector2( 184.006, 26.8318 )
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme = ExtResource( 3 )
+text = "Novo PowerUp!
+\"E\" para equipar"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="PlayerPowerUps/Mago/Label2"]
+autoplay = "default"
+anims/default = SubResource( 21 )
+
+[node name="Granada" type="TextureRect" parent="PlayerPowerUps"]
+visible = false
+margin_left = 110.0
+margin_top = 48.0
+margin_right = 150.0
+margin_bottom = 88.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture = ExtResource( 17 )
+
+[node name="Label" type="Label" parent="PlayerPowerUps/Granada"]
+margin_left = -12.0
+margin_top = 40.0
+margin_right = 58.0
+margin_bottom = 48.0
+size_flags_vertical = 0
+theme = ExtResource( 5 )
+text = "Granada"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="PlayerPowerUps/Granada"]
+margin_left = 26.1637
+margin_top = 37.4869
+margin_right = 390.164
+margin_bottom = 86.4869
+rect_rotation = -10.0
+rect_pivot_offset = Vector2( 184.006, 26.8318 )
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme = ExtResource( 3 )
+text = "Novo PowerUp!
+\"E\" para equipar"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="PlayerPowerUps/Granada/Label2"]
+autoplay = "default"
+anims/default = SubResource( 22 )
+
+[node name="Marreta" type="TextureRect" parent="PlayerPowerUps"]
+visible = false
+margin_left = 110.0
+margin_top = 48.0
+margin_right = 150.0
+margin_bottom = 88.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture = ExtResource( 16 )
+
+[node name="Label" type="Label" parent="PlayerPowerUps/Marreta"]
+margin_left = -12.0
+margin_top = 40.0
+margin_right = 58.0
+margin_bottom = 48.0
+size_flags_vertical = 0
+theme = ExtResource( 5 )
+text = "Marreta Bionica"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="PlayerPowerUps/Marreta"]
+margin_left = 26.1637
+margin_top = 37.4869
+margin_right = 390.164
+margin_bottom = 86.4869
+rect_rotation = -10.0
+rect_pivot_offset = Vector2( 184.006, 26.8318 )
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme = ExtResource( 3 )
+text = "Novo PowerUp!
+\"E\" para equipar"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="PlayerPowerUps/Marreta/Label2"]
+autoplay = "default"
+anims/default = SubResource( 23 )
+
+[node name="Desert" type="TextureRect" parent="PlayerPowerUps"]
+visible = false
+margin_left = 110.0
+margin_top = 48.0
+margin_right = 150.0
+margin_bottom = 88.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture = ExtResource( 18 )
+
+[node name="Label" type="Label" parent="PlayerPowerUps/Desert"]
+margin_left = -12.0
+margin_top = 40.0
+margin_right = 58.0
+margin_bottom = 48.0
+size_flags_vertical = 0
+theme = ExtResource( 5 )
+text = "Desert Eagle"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="PlayerPowerUps/Desert"]
+margin_left = 26.1637
+margin_top = 37.4869
+margin_right = 390.164
+margin_bottom = 86.4869
+rect_rotation = -10.0
+rect_pivot_offset = Vector2( 184.006, 26.8318 )
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme = ExtResource( 3 )
+text = "Novo PowerUp!
+\"E\" para equipar"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="PlayerPowerUps/Desert/Label2"]
+autoplay = "default"
+anims/default = SubResource( 24 )
+
+[node name="Axe" type="TextureRect" parent="PlayerPowerUps"]
+visible = false
+margin_left = 110.0
+margin_top = 48.0
+margin_right = 150.0
+margin_bottom = 88.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture = ExtResource( 23 )
+
+[node name="Label" type="Label" parent="PlayerPowerUps/Axe"]
+margin_left = -12.0
+margin_top = 40.0
+margin_right = 58.0
+margin_bottom = 48.0
+size_flags_vertical = 0
+theme = ExtResource( 5 )
+text = "Machado Duplo"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="PlayerPowerUps/Axe"]
+margin_left = 26.1637
+margin_top = 37.4869
+margin_right = 390.164
+margin_bottom = 86.4869
+rect_rotation = -10.0
+rect_pivot_offset = Vector2( 184.006, 26.8318 )
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme = ExtResource( 3 )
+text = "Novo PowerUp!
+\"E\" para equipar"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="PlayerPowerUps/Axe/Label2"]
+autoplay = "default"
+anims/default = SubResource( 25 )
+
+[node name="Mosquete" type="TextureRect" parent="PlayerPowerUps"]
+visible = false
+margin_left = 110.0
+margin_top = 48.0
+margin_right = 150.0
+margin_bottom = 88.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture = ExtResource( 19 )
+
+[node name="Label" type="Label" parent="PlayerPowerUps/Mosquete"]
+margin_left = -12.0
+margin_top = 40.0
+margin_right = 58.0
+margin_bottom = 48.0
+size_flags_vertical = 0
+theme = ExtResource( 5 )
+text = "Musket"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="PlayerPowerUps/Mosquete"]
+margin_left = 26.1637
+margin_top = 37.4869
+margin_right = 390.164
+margin_bottom = 86.4869
+rect_rotation = -10.0
+rect_pivot_offset = Vector2( 184.006, 26.8318 )
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme = ExtResource( 3 )
+text = "Novo PowerUp!
+\"E\" para equipar"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="PlayerPowerUps/Mosquete/Label2"]
+autoplay = "default"
+anims/default = SubResource( 26 )
+
+[node name="Ppsh" type="TextureRect" parent="PlayerPowerUps"]
+visible = false
+margin_left = 110.0
+margin_top = 48.0
+margin_right = 150.0
+margin_bottom = 88.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture = ExtResource( 20 )
+
+[node name="Label" type="Label" parent="PlayerPowerUps/Ppsh"]
+margin_left = -12.0
+margin_top = 40.0
+margin_right = 58.0
+margin_bottom = 48.0
+size_flags_vertical = 0
+theme = ExtResource( 5 )
+text = "PPSh"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="PlayerPowerUps/Ppsh"]
+margin_left = 26.1637
+margin_top = 37.4869
+margin_right = 390.164
+margin_bottom = 86.4869
+rect_rotation = -10.0
+rect_pivot_offset = Vector2( 184.006, 26.8318 )
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme = ExtResource( 3 )
+text = "Novo PowerUp!
+\"E\" para equipar"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="PlayerPowerUps/Ppsh/Label2"]
+autoplay = "default"
+anims/default = SubResource( 27 )
+
+[node name="Bomba" type="TextureRect" parent="PlayerPowerUps"]
+visible = false
+margin_left = 110.0
+margin_top = 48.0
+margin_right = 150.0
+margin_bottom = 88.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture = ExtResource( 21 )
+
+[node name="Label" type="Label" parent="PlayerPowerUps/Bomba"]
+margin_left = -12.0
+margin_top = 40.0
+margin_right = 58.0
+margin_bottom = 48.0
+size_flags_vertical = 0
+theme = ExtResource( 5 )
+text = "Bomba"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="PlayerPowerUps/Bomba"]
+margin_left = 26.1637
+margin_top = 37.4869
+margin_right = 390.164
+margin_bottom = 86.4869
+rect_rotation = -10.0
+rect_pivot_offset = Vector2( 184.006, 26.8318 )
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme = ExtResource( 3 )
+text = "Novo PowerUp!
+\"E\" para equipar"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="PlayerPowerUps/Bomba/Label2"]
+autoplay = "default"
+anims/default = SubResource( 28 )
+
+[node name="Minigun" type="TextureRect" parent="PlayerPowerUps"]
+visible = false
+margin_left = 110.0
+margin_top = 48.0
+margin_right = 150.0
+margin_bottom = 88.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture = ExtResource( 22 )
+
+[node name="Label" type="Label" parent="PlayerPowerUps/Minigun"]
+margin_left = -12.0
+margin_top = 40.0
+margin_right = 58.0
+margin_bottom = 48.0
+size_flags_vertical = 0
+theme = ExtResource( 5 )
+text = "Minigun"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="PlayerPowerUps/Minigun"]
+margin_left = 26.1637
+margin_top = 37.4869
+margin_right = 390.164
+margin_bottom = 86.4869
+rect_rotation = -10.0
+rect_pivot_offset = Vector2( 184.006, 26.8318 )
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme = ExtResource( 3 )
+text = "Novo PowerUp!
+\"E\" para equipar"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="PlayerPowerUps/Minigun/Label2"]
+autoplay = "default"
+anims/default = SubResource( 29 )
+
+[node name="playerHealth" type="ProgressBar" parent="."]
+margin_left = 16.0
+margin_top = 16.0
+margin_right = 56.0
+margin_bottom = 30.0
+rect_scale = Vector2( 3, 1.5 )
+mouse_filter = 2
+theme = SubResource( 15 )
+custom_styles/fg = SubResource( 6 )
+custom_styles/bg = SubResource( 7 )
+value = 100.0
+percent_visible = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="enemyHealth" type="ProgressBar" parent="."]
+margin_left = 504.0
+margin_top = 16.0
+margin_right = 544.0
+margin_bottom = 30.0
+rect_scale = Vector2( 3, 1.5 )
+mouse_filter = 2
+theme = SubResource( 15 )
+custom_styles/fg = SubResource( 6 )
+custom_styles/bg = SubResource( 7 )
+value = 100.0
+percent_visible = false
+__meta__ = {
+"_edit_use_anchors_": false
+}

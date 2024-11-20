@@ -1,0 +1,219 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://assets/carinha/carinha3.png" type="Texture" id=1]
+[ext_resource path="res://assets/carinha/carinha4.png" type="Texture" id=2]
+[ext_resource path="res://scenes/UI/Intro Animation.gd" type="Script" id=3]
+[ext_resource path="res://assets/carinha/carinha1.png" type="Texture" id=4]
+[ext_resource path="res://assets/carinha/carinha2.png" type="Texture" id=5]
+[ext_resource path="res://sounds/bip.wav" type="AudioStream" id=6]
+[ext_resource path="res://assets/bG_IJJ.png" type="Texture" id=7]
+[ext_resource path="res://thom.png" type="Texture" id=8]
+[ext_resource path="res://rose.png" type="Texture" id=9]
+
+[sub_resource type="AnimatedTexture" id=1]
+frames = 4
+oneshot = true
+fps = 6.0
+frame_0/texture = ExtResource( 4 )
+frame_1/texture = ExtResource( 5 )
+frame_1/delay_sec = 0.0
+frame_2/texture = ExtResource( 1 )
+frame_2/delay_sec = 0.0
+frame_3/texture = ExtResource( 2 )
+frame_3/delay_sec = 0.0
+
+[sub_resource type="Animation" id=2]
+resource_name = "anim"
+length = 10.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Centro/LogoR:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2.6, 3 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("MarginContainer/LogoJaaj:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 7 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("MarginContainer/LogoJaaj:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 7, 7.2, 8.8, 9 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/3/type = "method"
+tracks/3/path = NodePath("Centro/LogoR/Bip")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0.5 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ 0.0 ],
+"method": "play"
+} ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Centro/Rose:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 3, 3.2, 4.8, 5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Centro/Rose:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Centro/Thom:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Centro/Thom:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 5, 5.2, 6.8, 7 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[node name="Intro Animation" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 640.0
+margin_bottom = 360.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Centro" type="CenterContainer" parent="."]
+margin_right = 650.0
+margin_bottom = 360.004
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LogoR" type="TextureRect" parent="Centro"]
+margin_left = 257.0
+margin_top = 100.0
+margin_right = 392.0
+margin_bottom = 260.0
+rect_pivot_offset = Vector2( 68.6462, 75.3138 )
+texture = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Bip" type="AudioStreamPlayer" parent="Centro/LogoR"]
+stream = ExtResource( 6 )
+volume_db = -20.0
+
+[node name="Rose" type="TextureRect" parent="Centro"]
+visible = false
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 226.0
+margin_top = 69.0
+margin_right = 424.0
+margin_bottom = 291.0
+rect_pivot_offset = Vector2( 68.6462, 75.3138 )
+texture = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Thom" type="TextureRect" parent="Centro"]
+visible = false
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 242.0
+margin_top = 77.0
+margin_right = 407.0
+margin_bottom = 282.0
+rect_pivot_offset = Vector2( 68.6462, 75.3138 )
+texture = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+margin_right = 640.0
+margin_bottom = 360.0
+custom_constants/margin_right = 16
+custom_constants/margin_top = 0
+custom_constants/margin_left = 32
+custom_constants/margin_bottom = 16
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LogoJaaj" type="TextureRect" parent="MarginContainer"]
+visible = false
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 162.0
+margin_top = 74.0
+margin_right = 494.0
+margin_bottom = 269.0
+size_flags_horizontal = 6
+size_flags_vertical = 4
+texture = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "anim"
+anims/anim = SubResource( 2 )
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]

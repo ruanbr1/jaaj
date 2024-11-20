@@ -1,0 +1,73 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://resources/themeNormal.tres" type="Theme" id=1]
+[ext_resource path="res://scenes/UI/Creditos.gd" type="Script" id=2]
+[ext_resource path="res://scenes/AnimatedButton.tscn" type="PackedScene" id=3]
+
+[node name="Creditos" type="CanvasLayer"]
+script = ExtResource( 2 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.133333, 0.12549, 0.203922, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -320.0
+margin_bottom = -180.0
+rect_scale = Vector2( 2, 2 )
+custom_constants/margin_right = 0
+custom_constants/margin_top = 16
+custom_constants/margin_left = 16
+custom_constants/margin_bottom = 16
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="MarginContainer"]
+margin_left = 60.0
+margin_top = 16.0
+margin_right = 276.0
+margin_bottom = 61.0
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme = ExtResource( 1 )
+text = "Fonte usada no jogo todo:
+BitPotion (https://joebrogers.itch.io/bitpotion)
+autor: Joeb Rogers (https://joebrogers.itch.io) "
+align = 1
+
+[node name="MarginContainer2" type="MarginContainer" parent="."]
+margin_right = 320.0
+margin_bottom = 180.0
+rect_scale = Vector2( 2, 2 )
+custom_constants/margin_bottom = 16
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer2"]
+margin_left = 112.0
+margin_top = 133.0
+margin_right = 208.0
+margin_bottom = 164.0
+size_flags_horizontal = 4
+size_flags_vertical = 8
+
+[node name="Control" type="Control" parent="MarginContainer2/VBoxContainer"]
+margin_right = 96.0
+margin_bottom = 2.0
+rect_min_size = Vector2( 0, 2 )
+
+[node name="BtnVoltar" parent="MarginContainer2/VBoxContainer" instance=ExtResource( 3 )]
+margin_top = 6.0
+margin_bottom = 31.0
+rect_scale = Vector2( 1, 1 )
+text = "VOLTAR"
+
+[connection signal="pressed" from="MarginContainer2/VBoxContainer/BtnVoltar" to="." method="_on_BtnVoltar_pressed"]
